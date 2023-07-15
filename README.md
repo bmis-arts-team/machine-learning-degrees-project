@@ -44,11 +44,11 @@ Use this for prediction for model and to show the output
 
 ### 8. Env Packages Reqired Versions
 
-Python=3.11.2
-Flask==2.3.2
-Werkzeug==2.3.6
-Pandas==2.0.3
-Numpy==1.24.3
-Sklearn==1.3.0
-Matplotlib==3.7.2
-Keras==2.13.1
+1. Python=3.11.2
+2. Flask==2.3.2
+3. Werkzeug==2.3.6
+4. Pandas==2.0.3
+5. Numpy==1.24.3
+6. Sklearn==1.3.0
+7. Matplotlib==3.7.2
+8. Keras==2.13.1
