@@ -1,10 +1,10 @@
 # Heart-Disease-Prediction Web Application
 
-## A Web Application to predict Heart-Disease using SVM  (Deployed on Heroku)
+## A Web Application to predict Heart-Disease using SVM
 
 
 ### 1.Project Requirements or Dependencies
-* Anaconda Python (to get ML Libraries)
+* Jupyter Notebook Python (to create, train and test the model)
 * Pip install flask (For Front-end)
 
 ### 2. Load Dataset
@@ -42,7 +42,13 @@ Use this for prediction for model and to show the output
  
 ### 7.Integrating web application with machine learning backend.
 
-### 8. Deployment on Heroku
+### 8. Env Packages Reqired Versions
 
-https://heartdeseaseprediction.herokuapp.com/
-
+Python=3.11.2
+Flask==2.3.2
+Werkzeug==2.3.6
+Pandas==2.0.3
+Numpy==1.24.3
+Sklearn==1.3.0
+Matplotlib==3.7.2
+Keras==2.13.1

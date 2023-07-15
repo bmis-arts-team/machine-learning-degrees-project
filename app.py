@@ -1,7 +1,8 @@
 from flask import Flask, render_template, request
-from sklearn.externals import joblib
+from joblib import load
 import pandas as pd
 import numpy as np
+
 
 app = Flask(__name__)
 
@@ -28,9 +29,9 @@ def predict():
         thal = float(request.form['thal'])
 
         pred_args = [age,sex,cp,trestbps,chol,fbs,restecg,thalach,exang,oldpeak,slope,ca,thal]
+        # pred_args = [1.63030976,0.81649658,0.97386259,-0.07975584,1.65153615,-0.32084447,1.18326286,-2.15983218,-0.58248237,1.00523959,0.69020139,2.68437746,-0.83288091]
 
-        mul_reg = open('heart_svm_13.pkl','rb')
-        ml_model = joblib.load(mul_reg)
+        ml_model = load('model/hd_svm.joblib')
         model_predcition = ml_model.predict([pred_args])
         if model_predcition == 1:
             res = 'Affected'
