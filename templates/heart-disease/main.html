@@ -1,0 +1,145 @@
+{% extends 'base.html' %}
+
+{% block title %} Heart Disease {% endblock %}
+
+{% block content %}
+<h1>
+    Heart Disease Prediction
+</h1>
+<br>
+
+
+<div class="wrapper">
+  <div class="container my-5">
+    <form class="" action="{{ url_for('heartDisease') }}" method="post">
+      <div class="row col-md-12">
+        <div class="col-md-4">
+          <div class="form-group">
+            <input type="number" placeholder="Age" name="age" id="age" class="form-control" required>
+          </div>
+        </div>
+        
+        <div class="col-md-4">
+          <div class="form-group">
+            <select class="form-control" name="sex" required="required">
+              <option value="" selected>Gender</option>
+              <option value="1">Male</option>
+              <option value="0">Female</option>
+            </select>
+          </div>
+        </div>
+        
+        <div class="col-md-4">
+          <div class="form-group">
+            <select class="form-control chosenn" name="cp" required="required">
+              <option value="" selected>Chest Pain Type(cp)</option>
+              <option value="0">Typical Angina</option>
+              <option value="1">Atypical Angina</option>
+              <option value="2">Non Anginal Pain</option>
+              <option value="3">Asymptomatic</option>
+            </select>
+         </div>
+        </div>
+        
+        <div class="col-md-4 pt-3">
+          <div class="form-group">
+            <input type="number" placeholder="Resting Blood Pressure (mm Hg)(trestbps)" name="trestbps" id="trestbps" class="form-control" required>
+          </div>
+        </div>
+        
+        <div class="col-md-4 pt-3">
+          <div class="form-group">
+            <input type="number" placeholder="Serum Cholestoral (mg/dl)(chol)" name="chol" id="chol" class="form-control" required>
+         </div>
+        </div>
+        
+        <div class="col-md-4 pt-3">
+          <div class="form-group">
+            <select class="form-control" name="fbs" required="required">
+              <option value="" selected>Fasting Blood Sugar > 120 (mg/dl)(fbs)</option>
+              <option value="1">Yes</option>
+              <option value="0">No</option>
+            </select>
+         </div>
+        </div>
+         
+        <div class="col-md-4 pt-3">
+          <div class="form-group">
+            <input type="number" placeholder="Maximum Heart Rate Achieved (thalach)" name="thalach" id="thalach" class="form-control" required>
+          </div>
+        </div>
+        
+        <div class="col-md-4 pt-3">
+          <div class="form-group">
+            <select class="form-control" name="exang" required="required">
+              <option value="" selected>Exercise Induced Angina (exang)</option>
+              <option value="1">Yes</option>
+              <option value="0">No</option>
+            </select>
+          </div>
+        </div>
+        
+        <div class="col-md-4 pt-3">
+          <div class="form-group">
+            <input type="text" placeholder="Oldpeak" name="oldpeak" id="oldpeak" class="form-control" required>
+          </div>
+        </div>
+        
+        <div class="col-md-6 pt-3">
+          <div class="form-group">
+            <select class="form-control chosenn" name="restecg" required="required">
+              <option value="" selected>Rresting Electrocardiographic Results(restecg)</option>
+              <option value="0">Normal</option>
+              <option value="1">Abnormal</option>
+              <option value="2">Probable</option>
+            </select>
+          </div>
+        </div>
+        
+        <div class="col-md-6 pt-3">
+          <div class="form-group">
+            <select class="form-control chosenn" name="slope" required="required">
+              <option value="" selected>Peak Exercise ST Segment (Slope)</option>
+              <option value="0">Upsloping</option>
+              <option value="1">Flat</option>
+              <option value="2">Downsloping</option>
+            </select>
+          </div>
+        </div>
+        
+        <div class="col-md-4 pt-3">
+          <div class="form-group">
+            <select class="form-control chosenn" name="ca" required="required">
+              <option value="" selected>Number of Major Vessels (ca)</option>
+              <option value="0">Zero</option>
+              <option value="1">One</option>
+              <option value="2">Two</option>
+              <option value="3">Three</option>
+              <option value="4">Four</option>
+            </select>
+          </div>
+        </div>
+        
+        <div class="col-md-4 pt-3">
+          <div class="form-group">
+            <select class="form-control chosenn" name="thal" required="required">
+              <option value="" selected>Thal Type (thal)</option>
+              <option value="0">Normal</option>
+              <option value="1">Fixed</option>
+              <option value="2">Defect</option>
+              <option value="3">Reversable</option>
+            </select>
+          </div>
+        </div>
+        
+        <div class="col-md-4 pt-3">
+          <div class="form-group">
+            <input type="submit" class="btn btn-primary" value="Submit">
+            <input type="reset" class="btn btn-danger" value="Reset">
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+{% endblock %}

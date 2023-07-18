@@ -8,11 +8,11 @@ app = Flask(__name__)
 
 @app.route('/')
 def home():
-    return render_template('original.html')
+    return render_template('index.html')
 
-
-@app.route("/predict", methods=['GET','POST'])
-def predict():
+   
+@app.route('/heart-disease', methods=['GET','POST'])
+def heartDisease():
     if request.method == 'POST':
         age = float(request.form['age'])
         sex = float(request.form['sex'])
@@ -38,7 +38,9 @@ def predict():
         else:
             res = 'Not affected'
         #return res
-    return render_template('predict.html', prediction = res)
+        return render_template('heart-disease/predict.html', prediction = res)
+    else:
+        return render_template('heart-disease/main.html')
 
 if __name__ == '__main__':
     app.run()
