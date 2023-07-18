@@ -15,8 +15,8 @@
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
         <link rel="stylesheet" href="assets/css/jquery.mCustomScrollbar.min.css">
         <link rel="stylesheet" href="static/assets/css/animate.css">
-        <link rel="stylesheet" href="static/assets/css/style.css">
         <link rel="stylesheet" href="static/assets/css/media-queries.css">
+        <link rel="stylesheet" href="static/assets/css/style.css">
 
         <!-- Favicon and touch icons -->
         <link rel="shortcut icon" href="assets/ico/favicon.png">
@@ -29,6 +29,11 @@
 
     <body>
     
+		<!-- open sidebar menu -->
+        <a class="open-menu" href="#" role="button">
+            <i class="fas fa-home"></i>
+        </a>
+        <br>
 	    <!-- Wrapper -->
         <div class="wrapper">
     	
@@ -41,13 +46,10 @@
 				</div>
 				
 				<div class="logo">
-					<h3><a href="index.html">Bootstrap 4 Template with Sidebar Menu</a></h3>
+					<h3><a href="{{  url_for('home') }}">HD Prediction</a></h3>
 				</div>
 				
 				<ul class="list-unstyled menu-elements">
-					<li class="active">
-						<a class="scroll-link" href="#top-content"><i class="fas fa-home"></i> Home</a>
-					</li>
 					<li>
 						<a class="scroll-link" href="#section-1"><i class="fas fa-cog"></i> What we do</a>
 					</li>
@@ -75,12 +77,6 @@
 					</li>
 				</ul>
 				
-				<div class="to-top">
-					<a class="btn btn-primary btn-customized-3" href="#" role="button">
-	                    <i class="fas fa-arrow-up"></i> Top
-	                </a>
-				</div>
-				
 				<div class="dark-light-buttons">
 					<a class="btn btn-primary btn-customized-4 btn-customized-dark" href="#" role="button">Dark</a>
 					<a class="btn btn-primary btn-customized-4 btn-customized-light" href="#" role="button">Light</a>
@@ -89,10 +85,6 @@
 			</nav>
 			<!-- End sidebar -->
 			
-			<!-- open sidebar menu -->
-            <a class="btn btn-primary btn-customized open-menu" href="#" role="button">
-                <i class="fas fa-align-left"></i>
-            </a>
     		<div class="overlay"></div>
 			<!-- Dark overlay -->
             {% block content %} {% endblock %}</title>
