@@ -3,20 +3,30 @@
 {% block title %} Heart Disease {% endblock %}
 
 {% block content %}
-<h1 class="my-3">
-    Heart Disease Prediction
+
+<div class="sub-button shadow d-flex justify-content-start align-items-center p-2">
+  <a href="{{  url_for('home') }}" class="text-decoration-none" style="font-size: 30px">
+  <i class="fas fa-robot"></i></i>
+  </a>
+</div>
+
+
+<h1 class="mt-5">
+  Heart Disease Prediction
 </h1>
 <div class="wrapper">
+  <p clss="pb-2">Fill in the fields of the form below then submit so that the model predicts whether you have heart disease or not</p>
+  <br>
   <div class="container my-2">
     <form class="" action="{{ url_for('heartDisease') }}" method="post">
       <div class="row">
-        <div class="col-md-4 col-sm-12">
+        <div class="col-md-3 col-sm-12">
           <div class="form-group">
             <input type="number" placeholder="Age" name="age" id="age" class="form-control" required>
           </div>
         </div>
         
-        <div class="col-md-4 col-sm-12">
+        <div class="col-md-3 col-sm-12">
           <div class="form-group">
             <select class="form-control" name="sex" required="required">
               <option value="" selected>Gender</option>
@@ -26,7 +36,7 @@
           </div>
         </div>
         
-        <div class="col-md-4 col-sm-12">
+        <div class="col-md-3 col-sm-12">
           <div class="form-group">
             <select class="form-control chosenn" name="cp" required="required">
               <option value="" selected>Chest Pain Type(cp)</option>
@@ -36,6 +46,18 @@
               <option value="3">Asymptomatic</option>
             </select>
          </div>
+        </div>
+        
+        <div class="col-md-3 col-sm-12">
+          <div class="form-group">
+            <select class="form-control chosenn" name="thal" required="required">
+              <option value="" selected>Thal Type (thal)</option>
+              <option value="0">Normal</option>
+              <option value="1">Fixed</option>
+              <option value="2">Defect</option>
+              <option value="3">Reversable</option>
+            </select>
+          </div>
         </div>
         
         <div class="col-md-4 col-sm-12 pt-3">
@@ -82,10 +104,10 @@
           </div>
         </div>
         
-        <div class="col-md-6 col-sm-12 pt-3">
+        <div class="col-md-4 col-sm-12 pt-3">
           <div class="form-group">
             <select class="form-control chosenn" name="restecg" required="required">
-              <option value="" selected>Resting Electrocardiographic Results(restecg)</option>
+              <option value="" selected>Resting Electrocardiographic(restecg)</option>
               <option value="0">Normal</option>
               <option value="1">Abnormal</option>
               <option value="2">Probable</option>
@@ -93,7 +115,7 @@
           </div>
         </div>
         
-        <div class="col-md-6 col-sm-12 pt-3">
+        <div class="col-md-4 col-sm-12 pt-3">
           <div class="form-group">
             <select class="form-control chosenn" name="slope" required="required">
               <option value="" selected>Peak Exercise ST Segment (Slope)</option>
@@ -117,26 +139,37 @@
           </div>
         </div>
         
-        <div class="col-md-4 col-sm-12 pt-3">
-          <div class="form-group">
-            <select class="form-control chosenn" name="thal" required="required">
-              <option value="" selected>Thal Type (thal)</option>
-              <option value="0">Normal</option>
-              <option value="1">Fixed</option>
-              <option value="2">Defect</option>
-              <option value="3">Reversable</option>
-            </select>
-          </div>
-        </div>
-        
-        <div class="col-md-4 col-sm-12 pt-3">
+        <div class="col-md-4 col-sm-12 pt-3 d-flex justify-content-start">
           <div class="buttons wow form-group">
-            <input type="submit" class="btn btn-primary btn-customized" value="Submit">
+            <button type="submit" class="btn btn-primary btn-customized">Submit</button>
             <input type="reset" class="btn btn-outline-primary text-dark" value="Reset">
           </div>
         </div>
       </div>
     </form>
   </div>
+  
+  <section id="facilities">
+    <div class="container mb-3">
+      <div class="card" style= "max-width: auto; margin:0 auto;">
+        <div class="card-body">
+      <div class="title">
+        <h3>
+          <font color='Black'>According to the different values provided as input, the model has detected that you are</font>
+        </h3>
+        <font color='white'>
+          <h1>
+            <font color="blue">Result</font>
+         </h1>
+        </font>
+        <h3>
+          <font color='Black'>by Heart Disease</font>
+        </h3>
+      </div>
+    </div>
+    </div>
+    </div>
+  </section>
+  
 </div>
 {% endblock %}
