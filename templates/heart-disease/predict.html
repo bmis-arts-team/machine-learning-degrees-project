@@ -17,21 +17,24 @@
      <div class="container">
        <div class="card" style= "max-width: 500px; margin:0 auto;">
          <div class="card-body">
-       <div class="title">
+       <div class="title" id='result-success'>
          <h3>
-           <font color='Black'>Our model predict you are </font>
-         </h3>
+          <font color='Black'>According to the different values provided as input, the model has detected that you are</font>
+        </h3>
          <font color='white'>
-           <h1>
-             <font color="blue">{{ prediction }}</font>
+           <h1 id="response">
+             
           </h1>
          </font>
          <h3>
            <font color='Black'>by Heart Disease</font>
          </h3>
        </div>
+       <div class="title text-danger" id='result-error'>
+       </div>
+      </div>
      </div>
      </div>
-     </div>
+     <button id="new_prediction" class="btn button_custom mb-3">New Prediction</button>
    </section>
 {% endblock %}

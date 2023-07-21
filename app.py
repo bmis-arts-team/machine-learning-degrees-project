@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request,jsonify
 from joblib import load
 import pandas as pd
 import numpy as np
@@ -37,8 +37,8 @@ def heartDisease():
             res = 'Affected'
         else:
             res = 'Not affected'
-        #return res
-        return render_template('heart-disease/predict.html', prediction = res)
+        return {'code': 200, 'data':res}
+        # return render_template('heart-disease/predict.html', prediction = res)
     else:
         return render_template('heart-disease/main.html')
 

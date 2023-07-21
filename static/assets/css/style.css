@@ -431,29 +431,38 @@ a.btn-customized-4.btn-customized-light.btn.btn-primary:not(:disabled):not(.disa
 
 footer { padding: 40px 0; }
 
-.btn-primary, .btn-primary:hover{
+.btn:focus, .input:focus, .btn:active {
+	outline: none !important;
+	box-shadow: none;
+    outline-color: transparent;
+    outline-width: 0;
+    outline-style: none;
+ }
+ 
+.button_custom, .button_custom:hover{
 	background-color: #cd533d;
+	color: white;
 	border: none;
 }
 
-.btn-primary:hover, .btn-primary:focus{
+.button_custom:hover, .button_custom:focus{
 	border: 1px solid #cd533d;
+	background-color: #cd533d;
 }
-
-.btn-outline-primary{
+   
+.btn_outline_custom{
 	/* border: 1px solid #cd533d; */
 	color: #cd533d;
 }
 
-.btn-outline-primary{
+.btn_outline_custom{
 	color: #cd533d;
 	border: none;
 }
 
-.btn-outline-primary:hover, .btn-outline-primary:focus{
+.btn_outline_custom:hover, .btn_outline_custom:focus, .btn_outline_custom:focus{
 	border: 1px solid #cd533d;
 	color: #cd533d;
-	background-color: white;
 }
 
 .shadow a{

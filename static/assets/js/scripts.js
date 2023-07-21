@@ -129,3 +129,73 @@ jQuery(document).ready(function() {
 	});
 	
 });
+
+$('#new_prediction').on({
+	click: function() {
+		$('#predict').trigger("reset");
+		
+		document.getElementById('submit').classList.remove("d-none");
+		document.getElementById('reset').classList.remove("d-none");
+		
+		document.getElementById('prediction').classList.remove("d-none");
+		
+		document.getElementById('result-error').classList.add("d-none");
+		document.getElementById('result-success').classList.add("d-none");
+		document.getElementById('result').classList.add("d-none");
+	}
+})
+
+$('#predict').submit(function(e) {
+	e.preventDefault();
+	var postdata = $('#predict').serialize();
+	
+	document.getElementById('submit').classList.add("d-none");
+	document.getElementById('reset').classList.add("d-none");
+	document.getElementById('loading').classList.remove("d-none");
+	$.ajax({
+		type: 'POST',
+		url: 'heart-disease',
+		data: postdata,
+		dataType: 'json',
+		success: function(response) {
+			if(response.code==200){
+				// console.log(response);
+				document.getElementById('prediction').classList.add("d-none");
+				document.getElementById('response').innerHTML = response.data;
+				if(response.data=='Affected'){
+					document.getElementById('response').classList.add("text-danger");
+					document.getElementById('response').classList.remove("text-success");
+				}
+				else{
+					// console.log(response)
+					document.getElementById('response').classList.add("text-success");
+					document.getElementById('response').classList.remove("text-danger");
+				}
+				document.getElementById('result-error').classList.add("d-none");
+				
+				document.getElementById('result').classList.remove("d-none");
+				document.getElementById('result-success').classList.remove("d-none");
+				
+				document.getElementById('loading').classList.add("d-none");
+			}
+			else{
+				// console.log(response)
+				document.getElementById('prediction').classList.add("d-none");
+				document.getElementById('result-error').innerHTML = JSON.stringify(response)
+				document.getElementById('result-error').classList.remove("d-none");
+				document.getElementById('result-success').classList.add("d-none");
+				document.getElementById('loading').classList.add("d-none");
+			}
+		},
+		error: function(response) {
+			console.log(response)
+			document.getElementById('result-error').innerHTML = JSON.stringify(response)
+			document.getElementById('prediction').classList.add("d-none");
+			document.getElementById('result-success').classList.add("d-none");
+			document.getElementById('loading').classList.add("d-none");
+			
+			document.getElementById('result').classList.remove("d-none");
+			document.getElementById('result-error').classList.remove("d-none");
+		}
+	});
+});
