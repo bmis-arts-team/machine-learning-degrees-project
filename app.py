@@ -1,4 +1,5 @@
 from flask import Flask, render_template, request,jsonify
+from datetime import datetime
 from joblib import load
 import pandas as pd
 import numpy as np
@@ -8,7 +9,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def home():
-    return render_template('index.html')
+    return render_template('index.html',now = datetime.utcnow() )
 
    
 @app.route('/heart-disease', methods=['GET','POST'])

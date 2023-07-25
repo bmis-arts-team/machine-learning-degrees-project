@@ -14,16 +14,15 @@
 	        <div class="container">
 	            <div class="row">
 	                <div class="col col-md-10 offset-md-1 col-lg-8 offset-lg-2">
-	                	<h1 class="wow fadeIn">Bootstrap 4 Template with <strong>Sidebar Menu</strong></h1>
+	                	<h1 class="wow fadeIn">Heart disease <strong>prediction</strong> system</h1>
 	                	<div class="description wow fadeInLeft">
 	                		<p>
-	                			A template with Sidebar Menu made with the Bootstrap 4 framework. Download the template or learn how to create it, step by step, on 
-	                			<a href="https://azmind.com"><strong>AZMIND</strong></a>.
+	                			We use machine learning (ML) techniques to compute and predict the patient cardiovascular health after we have obtained essential data from the human body.
 	                		</p>
 	                	</div>
 	                	<div class="buttons wow fadeInUp">							
 							<a class="btn btn-primary btn-customized" href="{{ url_for('heartDisease') }}" role="button">
-								<i class="fas fa-book-open"></i> Get Start
+								<i class="fas fa-heartbeat"></i> Get Start
 							</a>
 						</div>
 	                </div>
@@ -36,7 +35,7 @@
 	        <div class="container">
 	            <div class="row">
 	                <div class="col section-1 section-description wow fadeIn">
-	                    <h2>What We Do</h2>
+	                    <h2>How it works</h2>
 	                    <div class="divider-1 wow fadeInUp"><span></span></div>
 	                </div>
 	            </div>
@@ -45,12 +44,12 @@
                 		<div class="row">
                 			<div class="col-md-4">
 			                	<div class="section-1-box-icon">
-			                		<i class="fas fa-magic"></i>
+			                		<i class="fas fa-robot"></i>
 			                	</div>
 		                	</div>
 	                		<div class="col-md-8">
-	                    		<h3>Branding</h3>
-	                    		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et.</p>
+	                    		<h3>Modele</h3>
+	                    		<p>We used nearly 300 inputs which were used to train and test our model and from which decision making is based.</p>
 	                    	</div>
 	                    </div>
                     </div>
@@ -58,12 +57,12 @@
 	                	<div class="row">
                 			<div class="col-md-4">
 			                	<div class="section-1-box-icon">
-			                		<i class="fas fa-cog"></i>
+			                		<i class="fa fa-file-contract"></i>
 			                	</div>
 		                	</div>
 	                		<div class="col-md-8">
-	                    		<h3>Web design</h3>
-	                    		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et.</p>
+	                    		<h3>Inputs and Output</h3>
+	                    		<p>Fill in each field of the form and our model will tell you according to your parameters if you are affected or not.</p>
 	                    	</div>
 	                    </div>
                     </div>
@@ -71,12 +70,12 @@
 	                	<div class="row">
                 			<div class="col-md-4">
 			                	<div class="section-1-box-icon">
-			                		<i class="fab fa-twitter"></i>
+			                		<i class="fa fa-solid fa-microchip"></i>
 			                	</div>
 		                	</div>
 	                		<div class="col-md-8">
-	                    		<h3>Social media</h3>
-	                    		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et.</p>
+	                    		<h3>Decision making</h3>
+	                    		<p>The result may not correspond to a laboratory result because our model is based only on what it has been trained.</p>
 	                    	</div>
 	                    </div>
                     </div>
@@ -93,20 +92,21 @@
 	            </div>
 	            <div class="row">
 	            	<div class="col-8 section-2-box wow fadeInLeft">
-                    	<h3>About Us</h3>
+                    	<h3>Context</h3>
                     	<p class="medium-paragraph">
-                    		Lorem ipsum dolor sit amet, consectetur adipisicing elit, 
-                    		sed do eiusmod tempor incididunt ut labore et. Ut wisi enim ad minim veniam, quis nostrud.
+                    		This is multivariate type of dataset which means providing or involving a variety of separate 
+                    		mathematical or statistical variables, multivariate numerical data analysis.
                     	</p>
                     	<p>
-                    		Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et.
-                    		Ut wisi enim ad minim veniam, quis nostrud. 
-                    		Exerci tation ullamcorper suscipit <a href="#">lobortis nisl</a> ut aliquip ex ea commodo consequat. 
-                    		Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl. 
+                    		It is composed of 
+                    		14 attributes which are age, sex, chest pain type, resting blood pressure, serum cholesterol, 
+                    		fasting blood sugar, resting electrocardiographic results, maximum heart rate achieved, exercise 
+                    		induced angina, oldpeak — ST depression induced by exercise relative to rest, the slope of the peak 
+                    		exercise ST segment, number of major vessels and Thalassemia. 
                     	</p>
 	                </div>
 	                <div class="col-4 section-2-box wow fadeInUp">
-                    	<img src="static/assets/img/about-us.jpg" alt="about-us">
+                    	<img src="static/assets/img/about-us.png" alt="about-us">
 	                </div>
 	            </div>
 	        </div>
@@ -118,191 +118,149 @@
 	        	
 	            <div class="row">
 	                <div class="col section-3 section-description wow fadeIn">
-	                    <h2>Our Projects</h2>
+	                    <h2>Meaning of inputs</h2>
 	                    <div class="divider-1 wow fadeInUp"><span></span></div>
 	                </div>
 	            </div>
 	            
 	            <div class="row">
-	                <div class="col-md-6 section-3-box wow fadeInLeft">
-	                	<div class="row">
-	                		<div class="col-md-3">
-	                			<div class="section-3-box-icon">
-	                				<i class="fas fa-paperclip"></i>
-	                			</div>
-	                		</div>
-	                		<div class="col-md-9">
-	                			<h3>Ut wisi enim ad minim</h3>
-		                    	<p>
-		                    		Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et.
-		                    		Ut wisi enim ad minim veniam, quis nostrud.
-		                    	</p>
-	                		</div>
-	                	</div>
+	                <div class="col-md-4 section-3-box wow fadeInLeft">
+	                    <div class="d-flex pb-2 align-items-center">
+							<i class="box-icon fas fa-check-circle"></i>
+	                		<h3 class="pl-2">age</h3>
+						</div>
+                    	<p>
+                    		The person’s age in years.
+                    	</p>
 	                </div>
-	                <div class="col-md-6 section-3-box wow fadeInLeft">
-	                	<div class="row">
-	                		<div class="col-md-3">
-	                			<div class="section-3-box-icon">
-	                				<i class="fas fa-pencil-alt"></i>
-	                			</div>
-	                		</div>
-	                		<div class="col-md-9">
-	                			<h3>Sed do eiusmod tempor</h3>
-		                    	<p>
-		                    		Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et.
-		                    		Ut wisi enim ad minim veniam, quis nostrud.
-		                    	</p>
-	                		</div>
-	                	</div>
+	                <div class="col-md-4 section-3-box wow fadeInLeft">
+	                    <div class="d-flex pb-2 align-items-center">
+							<i class="box-icon fas fa-check-circle"></i>
+	                		<h3 class="pl-2">sex</h3>
+						</div>
+                    	<p>
+                    		The person’s sex (1 = male, 0 = female)
+                    	</p>
 	                </div>
-	            </div>
-	            
-	            <div class="row">
-	                <div class="col-md-6 section-3-box wow fadeInLeft">
-	                	<div class="row">
-	                		<div class="col-md-3">
-	                			<div class="section-3-box-icon">
-	                				<i class="fas fa-cloud"></i>
-	                			</div>
-	                		</div>
-	                		<div class="col-md-9">
-	                			<h3>Quis nostrud exerci tat</h3>
-		                    	<p>
-		                    		Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et.
-		                    		Ut wisi enim ad minim veniam, quis nostrud.
-		                    	</p>
-	                		</div>
-	                	</div>
+	                <div class="col-md-4 section-3-box wow fadeInLeft">
+	                    <div class="d-flex pb-2 align-items-center">
+							<i class="box-icon fas fa-check-circle"></i>
+	                		<h3 class="pl-2">ca</h3>
+						</div>
+                    	<p>
+							The number of major vessels (0–3)
+                    	</p>
 	                </div>
-	                <div class="col-md-6 section-3-box wow fadeInLeft">
-	                	<div class="row">
-	                		<div class="col-md-3">
-	                			<div class="section-3-box-icon">
-	                				<i class="fab fa-google"></i>
-	                			</div>
-	                		</div>
-	                		<div class="col-md-9">
-	                			<h3>Minim veniam quis nostrud</h3>
-		                    	<p>
-		                    		Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et.
-		                    		Ut wisi enim ad minim veniam, quis nostrud.
-		                    	</p>
-	                		</div>
-	                	</div>
+	                <div class="col-md-4 section-3-box wow fadeInLeft">
+	                    <div class="d-flex pb-2 align-items-center">
+							<i class="box-icon fas fa-check-circle"></i>
+	                		<h3 class="pl-2">cp</h3>
+						</div>
+                    	<p>
+                    		chest pain type (asymptomatic, atypical angina, non-anginal pain, typical angina)
+                    	</p>
+	                </div>
+	                <div class="col-md-4 section-3-box wow fadeInLeft">
+	                    <div class="d-flex pb-2 align-items-center">
+							<i class="box-icon fas fa-check-circle"></i>
+	                		<h3 class="pl-2">trestbps</h3>
+						</div>
+                    	<p>
+                    		The person’s resting blood pressure (mm Hg on admission to the hospital)
+                    	</p>
+	                </div>
+	                <div class="col-md-4 section-3-box wow fadeInLeft">
+	                    <div class="d-flex pb-2 align-items-center">
+							<i class="box-icon fas fa-check-circle"></i>
+	                		<h3 class="pl-2">slope</h3>
+						</div>
+                    	<p>
+							The slope of the peak exercise ST segment (0: downsloping; 1: flat; 2: upsloping)
+                    	</p>
+	                </div>
+	                <div class="col-md-4 section-3-box wow fadeInLeft">
+	                    <div class="d-flex pb-2 align-items-center">
+							<i class="box-icon fas fa-check-circle"></i>
+	                		<h3 class="pl-2">chol</h3>
+						</div>
+                    	<p>
+                    		The person’s cholesterol measurement in mg/dl
+                    	</p>
+	                </div>
+	                <div class="col-md-4 section-3-box wow fadeInLeft">
+	                    <div class="d-flex pb-2 align-items-center">
+							<i class="box-icon fas fa-check-circle"></i>
+	                		<h3 class="pl-2">thalach</h3>
+						</div>
+                    	<p>
+                    		The person’s maximum heart rate achieved
+                    	</p>
+	                </div>
+	                <div class="col-md-4 section-3-box wow fadeInLeft">
+	                    <div class="d-flex pb-2 align-items-center">
+							<i class="box-icon fas fa-check-circle"></i>
+	                		<h3 class="pl-2">exang</h3>
+						</div>
+                    	<p>
+                    		Exercise induced angina (yes or no)
+                    	</p>
+	                </div>
+	                <div class="col-md-4 section-3-box wow fadeInLeft">
+	                    <div class="d-flex pb-2 align-items-center">
+							<i class="box-icon fas fa-check-circle"></i>
+	                		<h3 class="pl-2">restecg</h3>
+						</div>
+                    	<p>
+                    		resting electrocardiographic results, showing probable or definite left ventricular 
+                    		hypertrophy by Estes’ criteria: normal or having ST-T wave abnormality 
+                    		(T wave inversions and/or ST elevation or depression of > 0.05 mV))
+                    	</p>
+	                </div>
+	                <div class="col-md-4 section-3-box wow fadeInLeft">
+	                    <div class="d-flex pb-2 align-items-center">
+							<i class="box-icon fas fa-check-circle"></i>
+	                		<h3 class="pl-2">oldpeak</h3>
+						</div>
+                    	<p>
+                    		ST depression induced by exercise relative to rest ('ST' relates to positions on the ECG plot.)
+                    	</p>
+	                </div>
+	                <div class="col-md-4 section-3-box wow fadeInLeft">
+	                    <div class="d-flex pb-2 align-items-center">
+							<i class="box-icon fas fa-check-circle"></i>
+	                		<h3 class="pl-2">thal</h3>
+						</div>
+                    	<p>
+							A blood disorder called thalassemia Value 0: NULL (dropped from the dataset previously
+							Value 1: fixed defect (no blood flow in some part of the heart)
+							Value 2: normal blood flow
+							Value 3: reversible defect (a blood flow is observed but it is not normal)
+                    	</p>
+	                </div>
+	                <div class="col-md-4 section-3-box wow fadeInLeft">
+	                    <div class="d-flex pb-2 align-items-center">
+							<i class="box-icon fas fa-check-circle"></i>
+	                		<h3 class="pl-2">fbs</h3>
+						</div>
+                    	<p>
+                    		The person’s fasting blood sugar (> 120 mg/dl, 1 = true; 0 = false)
+                    	</p>
 	                </div>
 	            </div>
 
-	        </div>
-        </div>
-
-		<!-- Section 4 -->
-        <div class="section-4-container section-container section-container-image-bg" id="section-4">
-	        <div class="container">
-	            <div class="row">
-	                <div class="col section-4 section-description wow fadeInLeftBig">
-	                	<h2>We Think That...</h2>
-	                    <p>
-	                    	Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut 
-	                    	aliquip ex ea commodo consequat. Ut wisi enim ad minim veniam, quis nostrud.
-	                    </p>
-	                </div>
-	            </div>
-	            <div class="row">
-	            	<div class="col section-bottom-button wow fadeInUp">
-                        <a class="btn btn-primary btn-customized-2 scroll-link" href="#section-6" role="button">
-		            		<i class="fas fa-envelope"></i> Contact Us
-		            	</a>
-	            	</div>
-	            </div>
 	        </div>
         </div>
         
-        <!-- Section 5 -->
-        <div class="section-5-container section-container" id="section-5">
-	        <div class="container">
-	            <div class="row">
-	                <div class="col section-5 section-description wow fadeIn">
-	                    <h2>Portfolio</h2>
-	                    <div class="divider-1 wow fadeInUp"><span></span></div>
-	                    <p>We have completed 486 projects since we started back in 2013. Check them out!</p>
-	                </div>
-	            </div>
-	            <div class="row">
-                	<div class="col-md-4 section-5-box wow fadeInUp">
-                		<div class="section-5-box-image"><img src="static/assets/img/portfolio/1.jpg" alt="portfolio-1"></div>
-                		<h3><a href="#">Acme branding</a> <i class="fas fa-angle-right"></i></h3>
-                		<div class="section-5-box-date"><i class="far fa-calendar"></i> June 2019</div>
-                		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et.</p>
-                    </div>
-                    <div class="col-md-4 section-5-box wow fadeInDown">
-	                	<div class="section-5-box-image"><img src="static/assets/img/portfolio/2.jpg" alt="portfolio-2"></div>
-                		<h3><a href="#">Created 150 flyers</a> <i class="fas fa-angle-right"></i></h3>
-                		<div class="section-5-box-date"><i class="far fa-calendar"></i> February 2019</div>
-                		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et.</p>
-                    </div>
-                    <div class="col-md-4 section-5-box wow fadeInUp">
-	                	<div class="section-5-box-image"><img src="static/assets/img/portfolio/3.jpg" alt="portfolio-3"></div>
-                		<h3><a href="#">WordPress design</a> <i class="fas fa-angle-right"></i></h3>
-                		<div class="section-5-box-date"><i class="far fa-calendar"></i> November 2018</div>
-                		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et.</p>
-                    </div>
-	            </div>
-	            <div class="row">
-	            	<div class="col section-bottom-button wow fadeInUp">
-                        <a class="btn btn-primary btn-customized" href="#" role="button">
-		            		<i class="fas fa-sync"></i> View All
-		            	</a>
-	            	</div>
-	            </div>
-	        </div>
-        </div>
         
-        <!-- Section 6 -->
-        <div class="section-6-container section-container section-container-image-bg" id="section-6">
-	        <div class="container">
-	            <div class="row">
-	                <div class="col section-6 section-description wow fadeIn">
-	                    <h2>Contact Us</h2>
-	                    <div class="divider-1 wow fadeInUp"><span></span></div>
-	                    <p>Send us an email using the form below or follow us on our social media channels.</p>
-	                </div>
-	            </div>
-	            <div class="row">
-                	<div class="col-md-6 section-6-box wow fadeInUp">
-                		<h3>By eMail</h3>
-                    	<div class="section-6-form">
-                    		<form role="form" action="assets/contact.php" method="post">
-		                    	<div class="form-group">
-		                    		<label class="sr-only" for="contact-email">Email</label>
-		                        	<input type="text" name="email" placeholder="Email..." class="contact-email form-control" id="contact-email">
-		                        </div>
-		                        <div class="form-group">
-		                        	<label class="sr-only" for="contact-subject">Subject</label>
-		                        	<input type="text" name="subject" placeholder="Subject..." class="contact-subject form-control" id="contact-subject">
-		                        </div>
-		                        <div class="form-group">
-		                        	<label class="sr-only" for="contact-message">Message</label>
-		                        	<textarea name="message" placeholder="Message..." class="contact-message form-control" id="contact-message"></textarea>
-		                        </div>
-		                        <button type="submit" class="btn btn-primary btn-customized"><i class="fas fa-paper-plane"></i> Send Message</button>
-		                    </form>
-                    	</div>
-                    </div>
-                    <div class="col-md-5 offset-md-1 section-6-box wow fadeInDown">
-                    	<h3>Follow us</h3>
-                    	<div class="section-6-social">
-	                    	<a href="#"><i class="fab fa-facebook-f"></i></a>
-							<a href="#"><i class="fab fa-dribbble"></i></a>
-							<a href="#"><i class="fab fa-twitter"></i></a>
-							<a href="#"><i class="fab fa-instagram"></i></a>
-							<a href="#"><i class="fab fa-pinterest"></i></a>
-                    	</div>
-                    </div>
-	            </div>
-	        </div>
+        <div class="row">
+            <div class="col col-md-10 offset-md-1 col-lg-8 offset-lg-2 mb-5">
+                <div class="buttons wow fadeInDown">							
+					<a class="btn btn-primary btn-customized" href="{{ url_for('heartDisease') }}" role="button">
+						<i class="fas fa-heartbeat"></i> Get Start
+					</a>
+				</div>
+            </div>
         </div>
-
         <!-- Footer -->
         <footer class="footer-container">
 
@@ -310,7 +268,7 @@
 	        	<div class="row">
 
                     <div class="col">
-                    	&copy; Bootstrap 4 Template with Sidebar Menu. Download it for free on <a href="https://azmind.com">AZMIND</a>.
+                    	&copy; {{ now.year }} H.D.P.S
                     </div>
 
                 </div>

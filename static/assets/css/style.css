@@ -338,7 +338,13 @@ a.btn-customized-4.btn-customized-light.btn.btn-primary:not(:disabled):not(.disa
     border-radius: 50%;
 }
 
-.section-3-box h3 { margin-top: 0; padding: 0 0 10px 0; }
+.box-icon {
+    font-size: 20px; color: #f35b3f;
+    border-radius: 50%;
+    text-align: center;
+}
+
+.section-3-box h3 { margin-top: 0; padding: 0 0 0 0; }
 
 
 /***** Section 5 *****/
